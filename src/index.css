@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+body {
+    background: #f8fbfd;
+}
+
+* {
+    font-family: Calibri, sans-serif;
+}
