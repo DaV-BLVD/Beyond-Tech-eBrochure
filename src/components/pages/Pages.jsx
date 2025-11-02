@@ -32,7 +32,7 @@ const Pages = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="relative w-full overflow-hidden mt-7 sm:mt-20 lg:mb-5"
+            className="relative w-full overflow-hidden mt-7 sm:mt-20 lg:mb-4 lg:mt-15"
         >
             {/* Carousel Wrapper with swipe support */}
             <div
@@ -44,7 +44,7 @@ const Pages = forwardRef((props, ref) => {
                     <div
                         key={page.id}
                         className="shrink-0 w-full flex items-center justify-center 
-                   min-h-[400px] sm:min-h-[500px] md:min-h-[500px] mb-35 lg:mb-20"
+                   min-h-[400px] sm:min-h-[500px] md:min-h-[500px] mb-35 lg:mb-10"
                     >
                         <page.Component />
                     </div>
