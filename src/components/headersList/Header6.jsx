@@ -1,113 +1,70 @@
 import React from 'react';
-import {
-    FaNetworkWired,
-    FaShieldAlt,
-    FaChartLine,
-    FaCogs,
-} from 'react-icons/fa';
+import gurukul from '../../assets/1/gurukul.png';
+import inf from '../../assets/1/inf.png';
+import utopia from '../../assets/1/utopia.png';
+import bandipur from '../../assets/1/bandipur.png';
+import island from '../../assets/1/island.png';
+import inova from '../../assets/1/inova.png';
+import himalayan from '../../assets/1/himalayan.jpg';
+import fiberworld from '../../assets/1/fiberworld.png';
+import nepalRastraBank from '../../assets/1/Nepal_Rastra_Bank_Logo.jpeg';
+
+const companies = [
+    { name: 'Gurukul', logo: gurukul },
+    { name: 'INF', logo: inf },
+    { name: 'Utopia', logo: utopia },
+    { name: 'Bandipur', logo: bandipur },
+    { name: 'Island', logo: island },
+    { name: 'Inova', logo: inova },
+    { name: 'Himalayan', logo: himalayan },
+    { name: 'Fiberworld', logo: fiberworld },
+    { name: 'Nepal Rastra Bank', logo: nepalRastraBank },
+];
 
 const Header6 = () => {
-    const layers = [
-        {
-            icon: (
-                <FaNetworkWired className="absolute -left-5 top-1 text-red-500 text-lg sm:text-xl" />
-            ),
-            title: 'Enterprise Network',
-            desc: 'SD-WAN, segmented architecture, minimal CapEx',
-            bg: 'bg-red-50',
-            border: 'border-red-500',
-            rotate: '-rotate-1',
-            width: 'w-[180px] sm:w-[200px]',
-        },
-        {
-            icon: (
-                <FaShieldAlt className="absolute -left-5 top-1 text-red-600 text-lg sm:text-xl" />
-            ),
-            title: 'System Security',
-            desc: 'Firewalls, IDS/IPS, endpoint protection',
-            bg: 'bg-red-100',
-            border: 'border-red-600',
-            rotate: 'rotate-1',
-            width: 'w-[160px] sm:w-[180px]',
-        },
-        {
-            icon: (
-                <FaChartLine className="absolute -left-5 top-1 text-red-700 text-lg sm:text-xl" />
-            ),
-            title: 'Observability',
-            desc: 'Monitoring, alerts, incident readiness',
-            bg: 'bg-red-200',
-            border: 'border-red-700',
-            rotate: '-rotate-1',
-            width: 'w-[140px] sm:w-[160px]',
-        },
-        {
-            icon: (
-                <FaCogs className="absolute -left-5 top-1 text-red-800 text-lg sm:text-xl" />
-            ),
-            title: 'Automation',
-            desc: 'Containerization & smart operations',
-            bg: 'bg-red-300',
-            border: 'border-red-800',
-            rotate: 'rotate-1',
-            width: 'w-[120px] sm:w-[140px]',
-        },
-    ];
-
     return (
-        <div className="flex justify-center items-center px-4 sm:px-8 md:px-12 lg:px-20 mt-5">
+        <div className="flex justify-center items-center px-4 mt-17 sm:mt-4 sm:px-8 md:px-12 md:mt-5 lg:mt-3 lg:px-20 lg:h-full">
             <div
                 className="
-                w-full max-w-[1430px] min-h-[380px] sm:min-h-[420px]
-                rounded-2xl grid grid-cols-1 md:grid-cols-[50%_50%]
-                p-3 sm:p-4 md:p-6 lg:p-8
-                shadow-lg bg-linear-to-r from-gray-50 to-white
-                transition-all duration-500 ease-in-out
+                w-full max-w-[1430px] h-[500px]
+                rounded-2xl grid grid-cols-1
+                shadow-xl flex-col 
+                bg-linear-to-r from-white via-blue-50 to-white
+                overflow-hidden relative py-2
+
+                sm:p-4 sm:h-[520px] lg:w-full lg:min-h-[530px]
             "
             >
-                {/* Left: Text & Intro */}
-                <div className="flex flex-col justify-center pr-2 sm:pr-4 md:pr-6">
-                    <h5 className="text-red-600 uppercase font-semibold tracking-[1px] text-[16px] sm:text-[20px]">
-                        6. Network & System Solutions
-                    </h5>
+                {/* Floating accent circles */}
+                <div className="absolute top-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-blue-200 rounded-full opacity-20 -translate-x-12 -translate-y-12 animate-float-slow"></div>
+                <div className="absolute bottom-0 right-0 w-32 sm:w-48 h-32 sm:h-48 bg-red-200 rounded-full opacity-20 translate-x-12 sm:translate-x-24 translate-y-12 sm:translate-y-24 animate-float-reverse"></div>
 
-                    <h2 className="text-gray-900 font-bold text-[26px] sm:text-[32px] md:text-[36px] mt-1 leading-snug">
-                        Enterprise Architecture for Modern Businesses
-                    </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-1 sm:mb-2 md:pt-2 text-red-600">
+                    Trusted <span className="text-blue-500">By</span>
+                </h2>
 
-                    <p className="text-gray-600 text-[14px] sm:text-[16px] mt-2 leading-snug">
-                        Build a resilient, scalable, and secure IT backbone that
-                        supports SD-WAN, automation, and layered network
-                        security, minimizing CapEx while maximizing performance.
-                    </p>
-
-                    <p className="text-gray-700 text-[13px] mt-2 font-medium">
-                        Additional benefits:
-                    </p>
-                    <ul className="list-disc list-inside text-gray-700 mt-1 space-y-1 text-xs sm:text-[13px]">
-                        <li>Optimized bandwidth usage</li>
-                        <li>24/7 monitoring & proactive alerts</li>
-                        <li>Cloud integration ready</li>
-                        <li>Audit-friendly compliance & reporting</li>
-                    </ul>
-                </div>
-
-                {/* Right: Layered Stack Visualization */}
-                <div className="relative flex flex-col justify-center items-center mt-4 md:mt-0 space-y-2">
-                    {layers.map((layer, idx) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-1 px-8 sm:gap-2 items-center justify-items-center z-100">
+                    {companies.map((company, index) => (
                         <div
-                            key={idx}
-                            className={`${layer.width} ${layer.bg} border-l-4 ${layer.border} rounded-r-xl shadow-md p-2 sm:p-3 transform ${layer.rotate} relative`}
+                            key={index}
+                            className="flex flex-col items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-0 sm:p-2 w-[110px] sm:w-[155px] md:w-[180px] lg:w-[250px]"
                         >
-                            {layer.icon}
-                            <h4 className="font-semibold text-red-700 text-[13px] sm:text-sm">
-                                {layer.title}
-                            </h4>
-                            <p className="text-gray-700 text-[11px] sm:text-xs mt-1 leading-snug">
-                                {layer.desc}
-                            </p>
+                            <img
+                                src={company.logo}
+                                alt={company.name}
+                                className="w-16 h-14 sm:w-25 sm:h-20 md:w-30 md:h-20 object-contain mb-1 sm:mb-2"
+                            />
+                            <span className="text-gray-700 text-center text-[12px] sm:text-base font-semibold">
+                                {company.name}
+                            </span>
                         </div>
                     ))}
+                </div>
+
+                <div className="flex justify-center z-100">
+                    <p className="text-center text-gray-500 mt-1 w-[90%] sm:mt-4 text-xs sm:text-sm md:mt-0 md:pt-5 lg:text-lg">
+                        We proudly work with companies across Nepal & beyond.
+                    </p>
                 </div>
             </div>
         </div>

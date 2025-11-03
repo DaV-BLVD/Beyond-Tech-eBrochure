@@ -1,93 +1,120 @@
 import React from 'react';
+import {
+    FaNetworkWired,
+    FaShieldAlt,
+    FaChartLine,
+    FaCogs,
+} from 'react-icons/fa';
 
 const Header5 = () => {
-    const cards = [
+    const layers = [
         {
-            icon: '🧑‍💻',
-            title: 'On-call & Full-time',
-            desc: 'Flexible engagement models designed for your operational needs.',
-            color: 'text-red-500',
+            icon: (
+                <FaNetworkWired className="absolute -left-5 top-1 text-red-500 text-lg sm:text-xl" />
+            ),
+            title: 'Enterprise Network',
+            desc: 'SD-WAN, segmented architecture, minimal CapEx',
+            bg: 'bg-red-50',
+            border: 'border-red-500',
+            rotate: '-rotate-1',
+            width: 'w-[180px] sm:w-[200px]',
         },
         {
-            icon: '📊',
-            title: 'Proactive Monitoring',
-            desc: 'Continuous health checks, system updates, and actionable reporting.',
-            color: 'text-red-600',
+            icon: (
+                <FaShieldAlt className="absolute -left-5 top-1 text-red-600 text-lg sm:text-xl" />
+            ),
+            title: 'System Security',
+            desc: 'Firewalls, IDS/IPS, endpoint protection',
+            bg: 'bg-red-100',
+            border: 'border-red-600',
+            rotate: 'rotate-1',
+            width: 'w-[160px] sm:w-[180px]',
         },
         {
-            icon: '🧰',
-            title: 'Planned AMC',
-            desc: 'Preventive maintenance for all IT products and digital services.',
-            color: 'text-red-600',
+            icon: (
+                <FaChartLine className="absolute -left-5 top-1 text-red-700 text-lg sm:text-xl" />
+            ),
+            title: 'Observability',
+            desc: 'Monitoring, alerts, incident readiness',
+            bg: 'bg-red-200',
+            border: 'border-red-700',
+            rotate: '-rotate-1',
+            width: 'w-[140px] sm:w-[160px]',
+        },
+        {
+            icon: (
+                <FaCogs className="absolute -left-5 top-1 text-red-800 text-lg sm:text-xl" />
+            ),
+            title: 'Automation',
+            desc: 'Containerization & smart operations',
+            bg: 'bg-red-300',
+            border: 'border-red-800',
+            rotate: 'rotate-1',
+            width: 'w-[120px] sm:w-[140px]',
         },
     ];
 
     return (
-        <div className="flex justify-center items-center px-4 sm:px-8 md:px-12 lg:px-20 mt-5">
+        <div className="flex justify-center items-center px-4 mt-19 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-full">
             <div
                 className="
-                w-full max-w-[1430px] min-h-[380px] sm:min-h-[420px]
-                rounded-2xl flex flex-col justify-center items-center
-                p-4 sm:p-6 lg:py-6
-                shadow-lg bg-linear-to-b from-white to-red-50
-                transition-all duration-500 ease-in-out
+                w-full max-w-[1430px] h-[490px]
+                rounded-2xl grid grid-cols-1 md:grid-cols-[45%_55%]
+                shadow-xl flex-col 
+                bg-linear-to-r from-white via-blue-50 to-white
+                overflow-hidden relative py-2
+
+                sm:p-4 sm:h-[520px] lg:w-full lg:min-h-[550px]
             "
             >
-                {/* Title Section */}
-                <div className="text-center max-w-3xl">
-                    <h5 className="text-[16px] sm:text-[20px] uppercase tracking-[1px] text-red-500 font-semibold">
-                        5. AMC & Managed Services
+                {/* Floating accent circles */}
+                <div className="absolute top-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-blue-200 rounded-full opacity-20 -translate-x-12 -translate-y-12 animate-float-slow"></div>
+                <div className="absolute bottom-0 right-0 w-32 sm:w-48 h-32 sm:h-48 bg-red-200 rounded-full opacity-20 translate-x-12 sm:translate-x-24 translate-y-12 sm:translate-y-24 animate-float-reverse"></div>
+
+                {/* Left: Text & Intro */}
+                <div className="flex flex-col justify-center px-4 sm:pr-4 md:pr-1 md:ml-5">
+                    <h5 className="text-red-600 uppercase font-semibold tracking-[1px] text-[16px] text-center sm:text-[20px]">
+                        Network &{' '}
+                        <span className="text-blue-600">System Solutions</span>
                     </h5>
 
-                    <h2
-                        className="text-[26px] sm:text-[32px] lg:text-[36px] font-bold mt-1 leading-snug"
-                        style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
-                    >
-                        Keeping Your IT Ecosystem Healthy and Reliable.
+                    <h2 className="text-gray-900 font-bold text-[19px] text-center sm:text-[32px] md:text-[30px] lg:text-[40px] mt-1 leading-snug">
+                        Enterprise Architecture for Modern Businesses
                     </h2>
 
-                    <p className="text-[13px] sm:text-[15px] text-gray-600 mt-2 leading-snug">
-                        Proactive monitoring, planned AMC, and flexible support
-                        engagements ensure your systems stay secure, efficient,
-                        and always available.
+                    <p className="text-gray-600 text-[14px] sm:text-[16px] mt-2 leading-snug text-justify lg:text-[23px]">
+                        Build a resilient, scalable, and secure IT backbone that
+                        supports SD-WAN, automation, and layered network
+                        security, minimizing CapEx while maximizing performance.
                     </p>
+
+                    <p className="text-gray-700 text-[13px] mt-2 font-medium md:text-[16px] lg:text-[19px]">
+                        Additional benefits:
+                    </p>
+                    <ul className="list-disc list-inside text-gray-700 mt-1 space-y-1 text-xs sm:text-[13px] md:text-[15px] lg:text-[16px]">
+                        <li>Optimized bandwidth usage</li>
+                        <li>24/7 monitoring & proactive alerts</li>
+                        <li>Cloud integration ready</li>
+                        <li>Audit-friendly compliance & reporting</li>
+                    </ul>
                 </div>
 
-                {/* Content Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4 w-full max-w-6xl">
-                    {cards.map((card, idx) => (
+                {/* Right: Layered Stack Visualization */}
+                <div className="relative grid grid-cols-2 place-items-center ml-8 md:flex md:flex-col justify-center mt-0 md:mt-0 space-y-2 p-5 pt-0 items-center">
+                    {layers.map((layer, idx) => (
                         <div
                             key={idx}
-                            className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-3 sm:p-4 flex flex-col items-center text-center border border-gray-100"
+                            className={`${layer.width} ${layer.bg} border-l-4 ${layer.border} rounded-r-xl shadow-md p-2 sm:p-3 transform ${layer.rotate} relative`}
                         >
-                            <div
-                                className={`bg-blue-100 ${card.color} text-2xl sm:text-2xl w-10 h-10 flex items-center justify-center rounded-full mb-2 sm:mb-3`}
-                            >
-                                {card.icon}
-                            </div>
-                            <h3 className="text-lg sm:text-lg font-semibold text-gray-800 mb-1">
-                                {card.title}
-                            </h3>
-                            <p className="text-gray-600 text-[12px] sm:text-[14px] leading-snug">
-                                {card.desc}
+                            {layer.icon}
+                            <h4 className="font-semibold text-red-700 text-[13px] sm:text-sm md:text-[20px]">
+                                {layer.title}
+                            </h4>
+                            <p className="text-gray-700 text-[11px] sm:text-xs mt-1 leading-snug md:text-[15px]">
+                                {layer.desc}
                             </p>
                         </div>
                     ))}
-                </div>
-
-                {/* Bottom Note */}
-                <div className="mt-4 sm:mt-6 text-center text-gray-700 text-[13px] sm:text-[15px] font-medium">
-                    <span className="text-red-600 font-semibold">
-                        24/7 availability
-                    </span>{' '}
-                    •{' '}
-                    <span className="text-red-600 font-semibold">
-                        SLA-backed response
-                    </span>{' '}
-                    •{' '}
-                    <span className="text-red-600 font-semibold">
-                        Certified experts
-                    </span>
                 </div>
             </div>
         </div>

@@ -23,7 +23,6 @@ const Pages = forwardRef((props, ref) => {
         'About Us',
         'Security Solutions',
         'Tailored Software',
-        'AMC & Managed Services',
         'Network & Systems Solution',
         'Trusted By',
         "Let's talk",
@@ -32,19 +31,19 @@ const Pages = forwardRef((props, ref) => {
     return (
         <div
             ref={ref}
-            className="relative w-full overflow-hidden mt-7 sm:mt-20 lg:mb-4 lg:mt-15"
+            className="relative w-full overflow-hidden mt-11 sm:mt-13 lg:mb-1 lg:mt-14"
         >
             {/* Carousel Wrapper with swipe support */}
             <div
                 {...handlers}
-                className="flex transition-transform duration-700 ease-in-out "
+                className="flex transition-transform duration-700 ease-in-out h-[550px] sm:h-[580px] lg:h-[665px]"
                 style={{ transform: `translateX(-${current * 100}%)` }}
             >
                 {pages.map((page) => (
                     <div
                         key={page.id}
                         className="shrink-0 w-full flex items-center justify-center 
-                   min-h-[400px] sm:min-h-[500px] md:min-h-[500px] mb-35 lg:mb-10"
+                        min-h-[380px] sm:min-h-[400px] md:min-h-[500px] mb-30 lg:mb-10 sm:items-start "
                     >
                         <page.Component />
                     </div>
@@ -73,12 +72,12 @@ const Pages = forwardRef((props, ref) => {
             {/* Bottom Navigator */}
             <div
                 className="
-                absolute bottom-2 sm:bottom-0 left-1/2 transform -translate-x-1/2 w-full flex flex-wrap justify-center gap-2 sm:gap-4 px-2 sm:px-0"
+                absolute bottom-1 sm:bottom-1 left-1/2 transform -translate-x-1/2 w-full flex flex-wrap justify-center gap-1 sm:gap-1 px-2 sm:px-0 sm:w-[605px] lg:w-[800px] lg:bottom-0 lg:py-1"
             >
                 {titles.map((title, index) => (
                     <span
                         key={index}
-                        className={`flex cursor-pointer whitespace-nowrap px-3 sm:px-4 py-1 rounded-full text-[13px] sm:text-[15px] transition-colors duration-300 shrink-0
+                        className={`flex cursor-pointer whitespace-nowrap px-2 sm:px-2 py-1 rounded-full text-[8px] sm:text-[11px] transition-colors duration-300 shrink-0 lg:text-[14px]
                         ${
                             index === current
                                 ? 'bg-red-500 text-white font-bold'

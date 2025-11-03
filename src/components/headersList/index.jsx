@@ -5,4 +5,3 @@ export { default as Header4 } from './Header4.jsx';
 export { default as Header5 } from './Header5.jsx';
 export { default as Header6 } from './Header6.jsx';
 export { default as Header7 } from './Header7.jsx';
-export { default as Header8 } from './Header8.jsx';
