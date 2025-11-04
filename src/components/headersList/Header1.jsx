@@ -5,7 +5,7 @@ import manage from '../../assets/1/manage.png';
 
 const Header1 = () => {
     return (
-        <div className="flex justify-center items-center px-4 mt-17 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-full">
+        <div className="flex justify-center items-center px-4 mt-17 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-auto">
             <div
                 className="
                 w-full max-w-[1430px] min-h-[400px]
@@ -15,7 +15,8 @@ const Header1 = () => {
                 bg-linear-to-r from-white via-blue-50 to-white
                 overflow-hidden relative
 
-                sm:p-4 sm:h-[520px] lg:w-full lg:h-[590px]
+                sm:p-4 sm:h-[520px] lg:w-full lg:h-[500px] 
+                xl:h-[580px]
             "
             >
                 {/* Floating accent circles */}
@@ -29,14 +30,14 @@ const Header1 = () => {
                     </h5>
 
                     <span
-                        className="text-[27px] sm:text-[35px] md:text-[40px] md:text-center uppercase font-bold block lg:text-[50px]"
+                        className="text-[27px] sm:text-[35px] md:text-[40px] md:text-center uppercase font-bold block lg:text-[45px]"
                         style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
                     >
                         <span className="text-red-500">beyond</span>{' '}
                         <span className="text-blue-600">tech nepal</span>
                     </span>
 
-                    <p className="text-[18px] sm:text-[23px] md:text-[25px] font-semibold leading-tight mt-1 text-gray-800 lg:text-[36px]">
+                    <p className="text-[18px] sm:text-[23px] md:text-[25px] font-semibold leading-tight mt-1 text-gray-800 lg:text-[30px]">
                         Your Complete Business Management Suite
                     </p>
 

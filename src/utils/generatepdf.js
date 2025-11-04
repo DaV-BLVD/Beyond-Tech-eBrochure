@@ -23,18 +23,19 @@ export default async function generatePDF(containerNode, options = {}) {
         const node = pageNodes[i];
         // set inline white background to avoid transparent issues
 
-        node.style.background = node.style.background || '#ffffff';
+        node.style.background = node.style.background || '#f2f2f2';
         // Use dom-to-image-more with higher scale for better quality
+
+        node.style.paddingTop = `${75}px`;
 
         node.querySelectorAll('*').forEach((el) => {
             el.style.border = 'none';
-            el.style.boxShadow = 'none';
         });
 
         const dataUrl = await domtoimage.toPng(node, {
             quality: 1,
             multiplier: scale,
-            bgcolor: '#ffffff',
+            bgcolor: '#f2f2f2',
         });
         // Create Image to measure natural pixel size
         const img = new Image();
@@ -72,6 +73,7 @@ export default async function generatePDF(containerNode, options = {}) {
                         canvas.width = imgWidthPx;
                         canvas.height = sliceHeightPx;
                         const ctx = canvas.getContext('2d');
+
                         ctx.drawImage(
                             img,
                             0,
@@ -95,7 +97,6 @@ export default async function generatePDF(containerNode, options = {}) {
                             pdfWidth,
                             chunkDisplayHeight
                         );
-
                         renderedHeight += sliceHeightPx;
                     }
                     resolve();

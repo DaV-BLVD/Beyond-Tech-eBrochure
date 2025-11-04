@@ -55,16 +55,18 @@ const Header5 = () => {
     ];
 
     return (
-        <div className="flex justify-center items-center px-4 mt-19 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-full">
+        <div className="flex justify-center items-center px-4 mt-17 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-auto">
             <div
                 className="
-                w-full max-w-[1430px] h-[490px]
+                w-full max-w-[1430px] min-h-[400px]
                 rounded-2xl grid grid-cols-1 md:grid-cols-[45%_55%]
-                shadow-xl flex-col 
+                p-6 pt-2 pb-2 lg:p-5 lg:px-12
+                shadow-xl flex-col justify-center 
                 bg-linear-to-r from-white via-blue-50 to-white
-                overflow-hidden relative py-2
+                overflow-hidden relative
 
-                sm:p-4 sm:h-[520px] lg:w-full lg:min-h-[550px]
+                sm:p-4 sm:h-[520px] lg:w-full lg:h-[500px]
+                xl:h-[580px]
             "
             >
                 {/* Floating accent circles */}
@@ -73,16 +75,16 @@ const Header5 = () => {
 
                 {/* Left: Text & Intro */}
                 <div className="flex flex-col justify-center px-4 sm:pr-4 md:pr-1 md:ml-5">
-                    <h5 className="text-red-600 uppercase font-semibold tracking-[1px] text-[16px] text-center sm:text-[20px]">
+                    <h5 className="text-blue-600 uppercase font-semibold tracking-[1px] text-[16px] text-center  sm:text-[20px] xl:text-start">
                         Network &{' '}
-                        <span className="text-blue-600">System Solutions</span>
+                        <span className="text-red-500">System Solutions</span>
                     </h5>
 
-                    <h2 className="text-gray-900 font-bold text-[19px] text-center sm:text-[32px] md:text-[30px] lg:text-[40px] mt-1 leading-snug">
+                    <h2 className="text-gray-900 font-bold text-[19px] text-center sm:text-[32px] md:text-[30px] lg:text-[33px] mt-1 leading-snug xl:text-start">
                         Enterprise Architecture for Modern Businesses
                     </h2>
 
-                    <p className="text-gray-600 text-[14px] sm:text-[16px] mt-2 leading-snug text-justify lg:text-[23px]">
+                    <p className="text-gray-600 text-[14px] sm:text-[16px] mt-2 leading-snug text-justify lg:text-[17px] xl:text-[19px]">
                         Build a resilient, scalable, and secure IT backbone that
                         supports SD-WAN, automation, and layered network
                         security, minimizing CapEx while maximizing performance.

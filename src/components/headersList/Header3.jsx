@@ -6,16 +6,18 @@ import servers from '../../assets/1/3.3.png';
 
 const Header3 = () => {
     return (
-        <div className="flex justify-center items-center px-4 mt-19 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-full">
+        <div className="flex justify-center items-center px-4 mt-17 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-auto">
             <div
                 className="
-                w-full max-w-[1430px] h-[490px]
+                w-full max-w-[1430px] min-h-[400px]
                 rounded-2xl grid grid-cols-1 md:grid-cols-[45%_55%]
-                shadow-xl flex-col 
+                p-6 pt-2 pb-2 lg:p-5 lg:px-12
+                shadow-xl flex-col justify-center 
                 bg-linear-to-r from-white via-blue-50 to-white
-                overflow-hidden relative py-2
+                overflow-hidden relative
 
-                sm:p-4 sm:h-[520px] lg:w-full lg:min-h-[550px]
+                sm:p-4 sm:h-[520px] lg:w-full lg:h-[500px]
+                xl:h-[580px]
             "
             >
                 {/* Floating accent circles */}
@@ -24,9 +26,9 @@ const Header3 = () => {
 
                 {/* LEFT SECTION — Text Overview */}
                 <div className="flex flex-col justify-center text-center items-center md:text-left lg:items-start md:ml-3 pr-0 md:pr-6">
-                    <h5 className="text-[20px] sm:text-[25px] md:text-center uppercase tracking-[1px] text-red-500 font-semibold">
+                    <h5 className="text-[20px] sm:text-[25px] md:text-center uppercase tracking-[1px] text-blue-600 font-semibold">
                         Security{' '}
-                        <span className="text-blue-600">Solutions</span>
+                        <span className="text-red-500">Solutions</span>
                     </h5>
 
                     <h2

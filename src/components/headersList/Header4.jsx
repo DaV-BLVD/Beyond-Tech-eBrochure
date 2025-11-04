@@ -3,16 +3,18 @@ import four from '../../assets/1/4.png';
 
 const Header4 = () => {
     return (
-        <div className="flex justify-center items-center px-4 mt-19 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-full">
+        <div className="flex justify-center items-center px-4 mt-17 sm:mt-5 sm:px-8 md:px-12 lg:px-20 lg:h-auto">
             <div
                 className="
-                w-full max-w-[1430px] h-[490px]
+                w-full max-w-[1430px] min-h-[400px]
                 rounded-2xl grid grid-cols-1 md:grid-cols-[45%_55%]
-                shadow-xl flex-col 
+                p-6 pt-2 pb-2 lg:p-5 lg:px-12
+                shadow-xl flex-col justify-center 
                 bg-linear-to-r from-white via-blue-50 to-white
-                overflow-hidden relative py-2
+                overflow-hidden relative
 
-                sm:p-4 sm:h-[520px] lg:w-full lg:min-h-[550px]
+                sm:p-4 sm:h-[520px] lg:w-full lg:h-[500px]
+                xl:h-[580px]
             "
             >
                 {/* Floating accent circles */}
@@ -40,12 +42,12 @@ const Header4 = () => {
 
                 {/* RIGHT — Text + Cards */}
                 <div className="flex flex-col justify-start text-center md:text-left pl-0 md:pl-6 md:mt-0 md:justify-center">
-                    <h5 className="text-[18px] sm:text-[22px] uppercase tracking-[1px] text-red-600 font-semibold">
-                        Tailored <span className="text-blue-600">Software</span>
+                    <h5 className="text-[18px] sm:text-[22px] uppercase tracking-[1px] text-blue-600 font-semibold px-5 py-2">
+                        Tailored <span className="text-red-500">Software</span>
                     </h5>
 
                     <h2
-                        className="text-[19px] sm:text-[25px] md:text-[26px] lg:text-[36px] font-bold leading-snug px-5"
+                        className="text-[19px] sm:text-[25px] md:text-[26px] lg:text-[33px] font-bold leading-snug px-5"
                         style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}
                     >
                         Build exactly what your business needs — with delightful
@@ -70,7 +72,7 @@ const Header4 = () => {
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className={`${item.color} text-red-600 font-semibold text-center rounded-xl py-2 sm:py-3 shadow-sm hover:shadow-md transition text-sm sm:text-base`}
+                                className={`${item.color} text-red-600 font-semibold text-center rounded-xl py-2 sm:py-3 lg:py-1 shadow-sm hover:shadow-md transition text-sm sm:text-base`}
                             >
                                 {item.name}
                             </div>

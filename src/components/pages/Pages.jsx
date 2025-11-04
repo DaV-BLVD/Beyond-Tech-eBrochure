@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import pages from '../../data/data.jsx';
 import { useSwipeable } from 'react-swipeable';
 
@@ -9,13 +9,24 @@ const Pages = forwardRef((props, ref) => {
     const prevPage = () =>
         setCurrent((prev) => (prev - 1 + pages.length) % pages.length);
 
-    // Swipe handlers for mobile and desktop drag
+    // Swipe handlers for touch and mouse drag
     const handlers = useSwipeable({
         onSwipedLeft: nextPage,
         onSwipedRight: prevPage,
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
     });
+
+    // 🎯 Keyboard navigation: Left/Right arrow keys
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key === 'ArrowLeft') prevPage();
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
 
     // Page titles
     const titles = [
@@ -36,7 +47,7 @@ const Pages = forwardRef((props, ref) => {
             {/* Carousel Wrapper with swipe support */}
             <div
                 {...handlers}
-                className="flex transition-transform duration-700 ease-in-out h-[550px] sm:h-[580px] lg:h-[665px]"
+                className="flex transition-transform duration-700 ease-in-out h-[550px] sm:h-[580px] lg:h-[575px] xl:h-[670px]"
                 style={{ transform: `translateX(-${current * 100}%)` }}
             >
                 {pages.map((page) => (
